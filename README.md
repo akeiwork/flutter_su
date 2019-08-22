@@ -1,5 +1,7 @@
-# flutter_su (mobile version 1.0)
+# flutter.su (mobile version 2.0)
 
-Learning Flutter
+#### Learning Flutter
+ - Flutter 1.7
+ - Dart 2.4
 
 

@@ -1,15 +1,8 @@
 //Благослови Господи !
 import 'package:inter_widget/lesson.dart';
 import 'package:flutter/material.dart';
-import 'lessons_classes/dartlesson1.dart';
-import 'lessons_classes/dartlesson2.dart';
-import 'lessons_classes/flutterless1.dart';
-import 'lessons_classes/flutterless2.dart';
-import 'lessons_classes/flutterless3.dart';
-import 'lessons_classes/flutterless4.dart';
-import 'lessons_classes/flutterless5.dart';
-import 'lessons_classes/flutterless6.dart';
-import 'lessons_classes/flutterless7.dart';
+
+import 'lessons_classes/lib.dart';
 
 void main() => runApp(new InterWidget());
 
@@ -83,42 +76,28 @@ class Home extends StatelessWidget {
         shadowColor: Colors.blue,
         child: InkWell(
           onTap: () {
-            if(lessons.title == "D1")
-            {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => DartScreen1()));
+            switch(lessons.title) {
+              case "D1": Navigator.push(context, MaterialPageRoute(builder: (context) => DartScreen1()));
+              break;
+              case "D2": Navigator.push(context, MaterialPageRoute(builder: (context) => DartScreen2()));
+              break;
+              case "F1": Navigator.push(context, MaterialPageRoute(builder: (context) => FlutterScreen1()));
+              break;
+              case "F2": Navigator.push(context, MaterialPageRoute(builder: (context) => FlutterScreen2()));
+              break;
+              case "F3": Navigator.push(context, MaterialPageRoute(builder: (context) => FlutterScreen3()));
+              break;
+              case "F4": Navigator.push(context, MaterialPageRoute(builder: (context) => FlutterScreen4()));
+              break;
+              case "F5": Navigator.push(context, MaterialPageRoute(builder: (context) => FlutterScreen5()));
+              break;
+              case "F6": Navigator.push(context, MaterialPageRoute(builder: (context) => FlutterScreen6()));
+              break;
+              case "F7": Navigator.push(context, MaterialPageRoute(builder: (context) => FlutterScreen7()));
+              break;
             }
-            if(lessons.title == "D2")
-            {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => DartScreen2()));
-            }
-            if(lessons.title == "F1")
-            {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => FlutterScreen1()));
-            }
-            if(lessons.title == "F2")
-            {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => FlutterScreen2()));
-            }
-            if(lessons.title == "F3")
-            {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => FlutterScreen3()));
-            }
-            if(lessons.title == "F4")
-            {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => FlutterScreen4()));
-            }
-            if(lessons.title == "F5")
-            {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => FlutterScreen5()));
-            }
-            if(lessons.title == "F6")
-            {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => FlutterScreen6()));
-            }
-            if(lessons.title == "F7")
-            {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => FlutterScreen7()));
-            }
+
+
           },
           child: Image(
             image: AssetImage(lessons.image),

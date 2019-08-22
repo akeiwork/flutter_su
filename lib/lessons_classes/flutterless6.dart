@@ -1,28 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
+part of lessons;
 
-
-class FlutterScreen6 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return WebviewScaffold(
-      url: 'https://flutter.su/tutorial/6-async-await',
-      hidden: true,
-      scrollBar: true,
-      withJavascript: true,
-      withLocalUrl: true,
-      enableAppScheme: true,
-      withZoom: true,
-      allowFileURLs: true,
-      supportMultipleWindows: true,
-      appCacheEnabled: true,
-      clearCache: true,
-      withLocalStorage: true,
-      geolocationEnabled: true,
-      primary: true,
-      appBar: AppBar(title: Text("FLUTTER.SU"),
-        backgroundColor: Colors.blue,),
-
-    );
-  }
+class FlutterScreen6 extends AbstractScreen {
+  final String url = 'https://flutter.su/tutorial/6-async-await';
 }
